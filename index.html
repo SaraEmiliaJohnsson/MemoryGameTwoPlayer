@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Memory Game</title>
+		<script src="app.js" defer></script>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<main>
+			<div class="overlay-one overlay" id="overlay1">
+				<section>
+					<h2>Memory Spel</h2>
+					<hr />
+					<button type="button" class="meny" data-target="overlay2">
+						Starta Spelet
+					</button>
+				</section>
+			</div>
+			<div class="overlay-two overlay" id="overlay2">
+				<h2>Skriv in spelarnas namn</h2>
+				<hr />
+				<form class="player-form">
+					<label for="player1">Spelare 1:</label>
+					<input
+						type="text"
+						name="player1"
+						id="player1"
+						placeholder="Skriv in namn för spelare 1.."
+					/>
+					<br />
+					<label for="player2">Spelare 2:</label>
+					<input
+						type="text"
+						name="player2"
+						id="player2"
+						placeholder="Skriv in namn för spelare 2.."
+					/>
+					<br />
+					<button
+						type="button"
+						class="start-game-two-player"
+						data-target="overlay-game"
+					>
+						Starta Spelet
+					</button>
+				</form>
+			</div>
+
+			<div class="overlay-four overlay" id="overlay4">
+				<section>
+					<h2>Game Over</h2>
+					<hr />
+					<p id="winner-message"></p>
+					<button type="button" class="meny open-meny" data-target="overlay1">
+						Starta nytt spel
+					</button>
+				</section>
+			</div>
+
+			<div class="overlay-five overlay" id="overlay5">
+				<h2>Du har valt att avsluta spelet!</h2>
+
+				<p>Ha en fin dag!</p>
+				<hr />
+				<button
+					type="button"
+					class="meny open-meny-from-end-game"
+					data-target="overlay1"
+				>
+					Jag ångrade mig, en till match!
+				</button>
+			</div>
+
+			<div class="main-container" id="overlay-game">
+				<header class="header"><h2>Memory Spel</h2></header>
+
+				<section class="inside-container">
+					<section class="game-container">
+						<article class="flip-card one" data-name="kyckling">
+							<img
+								class="front-face"
+								src="img/chicken.jpg"
+								alt="chicken-bucket"
+							/>
+							<img class="back-face" src="img/framsida.jpg" alt="front" />
+						</article>
+						<article class="flip-card two" data-name="kyckling">
+							<img
+								class="front-face"
+								src="img/chicken.jpg"
+								alt="chicken-bucket"
+							/>
+							<img class="back-face" src="img/framsida.jpg" alt="front" />
+						</article>
+						<article class="flip-card three" data-name="donut">
+							<img class="front-face" src="img/donut.jpg" alt="donut" />
+							<img class="back-face" src="img/framsida.jpg" alt="front" />
+						</article>
+						<article class="flip-card four" data-name="donut">
+							<img class="front-face" src="img/donut.jpg" alt="donut" />
+							<img class="back-face" src="img/framsida.jpg" alt="front" />
+						</article>
+						<article class="flip-card five" data-name="hamburgare">
+							<img class="front-face" src="img/hamburger.jpg" alt="hamburger" />
+							<img class="back-face" src="img/framsida.jpg" alt="front" />
+						</article>
+						<article class="flip-card six" data-name="hamburgare">
+							<img class="front-face" src="img/hamburger.jpg" alt="hamburger" />
+							<img class="back-face" src="img/framsida.jpg" alt="front" />
+						</article>
+
+						<article class="flip-card seven" data-name="pizza">
+							<img class="front-face" src="img/pizza.jpg" alt="pizza" />
+							<img class="back-face" src="img/framsida.jpg" alt="front" />
+						</article>
+						<article class="flip-card eight" data-name="pizza">
+							<img class="front-face" src="img/pizza.jpg" alt="pizza" />
+							<img class="back-face" src="img/framsida.jpg" alt="front" />
+						</article>
+						<article class="flip-card nine" data-name="pommes">
+							<img class="front-face" src="img/pommes.jpg" alt="pommes" />
+							<img class="back-face" src="img/framsida.jpg" alt="front" />
+						</article>
+						<article class="flip-card ten" data-name="pommes">
+							<img class="front-face" src="img/pommes.jpg" alt="pommes" />
+							<img class="back-face" src="img/framsida.jpg" alt="front" />
+						</article>
+						<article class="flip-card eleven" data-name="popcorn">
+							<img class="front-face" src="img/popcorn.jpg" alt="popcorn" />
+							<img class="back-face" src="img/framsida.jpg" alt="front" />
+						</article>
+						<article class="flip-card twelve" data-name="popcorn">
+							<img class="front-face" src="img/popcorn.jpg" alt="popcorn" />
+							<img class="back-face" src="img/framsida.jpg" alt="front" />
+						</article>
+
+						<article class="flip-card thirteen" data-name="sandwich">
+							<img class="front-face" src="img/sandwich.jpg" alt="sandwich" />
+							<img class="back-face" src="img/framsida.jpg" alt="front" />
+						</article>
+						<article class="flip-card fourteen" data-name="sandwich">
+							<img class="front-face" src="img/sandwich.jpg" alt="sandwich" />
+							<img class="back-face" src="img/framsida.jpg" alt="front" />
+						</article>
+						<article class="flip-card fifteen" data-name="läsk">
+							<img class="front-face" src="img/soda.jpg" alt="soda" />
+							<img class="back-face" src="img/framsida.jpg" alt="front" />
+						</article>
+						<article class="flip-card sixteen" data-name="läsk">
+							<img class="front-face" src="img/soda.jpg" alt="soda" />
+							<img class="back-face" src="img/framsida.jpg" alt="front" />
+						</article>
+						<article class="flip-card seventeen" data-name="sushi">
+							<img class="front-face" src="img/sushi2.jpg" alt="sushi" />
+							<img class="back-face" src="img/framsida.jpg" alt="front" />
+						</article>
+						<article class="flip-card eighteen" data-name="sushi">
+							<img class="front-face" src="img/sushi2.jpg" alt="sushi" />
+							<img class="back-face" src="img/framsida.jpg" alt="front" />
+						</article>
+
+						<article class="flip-card nineteen" data-name="sushi-shrimp">
+							<img class="front-face" src="img/sushi.jpg" alt="sushi-shrimp" />
+							<img class="back-face" src="img/framsida.jpg" alt="front" />
+						</article>
+						<article class="flip-card twenty" data-name="sushi-shrimp">
+							<img class="front-face" src="img/sushi.jpg" alt="sushi-shrimp" />
+							<img class="back-face" src="img/framsida.jpg" alt="front" />
+						</article>
+						<article class="flip-card twentyone" data-name="taco">
+							<img class="front-face" src="img/taco.jpg" alt="taco" />
+							<img class="back-face" src="img/framsida.jpg" alt="front" />
+						</article>
+						<article class="flip-card twentytwo" data-name="taco">
+							<img class="front-face" src="img/taco.jpg" alt="taco" />
+							<img class="back-face" src="img/framsida.jpg" alt="front" />
+						</article>
+						<article class="flip-card twentythree" data-name="hot-dog">
+							<img class="front-face" src="img/hot-dog.jpg" alt="hot-dog" />
+							<img class="back-face" src="img/framsida.jpg" alt="front" />
+						</article>
+						<article class="flip-card twentyfour" data-name="hot-dog">
+							<img class="front-face" src="img/hot-dog.jpg" alt="hot-dog" />
+							<img class="back-face" src="img/framsida.jpg" alt="front" />
+						</article>
+					</section>
+
+					<aside class="aside">
+						<article class="players-turn">
+							<h2>Nu är det din tur, Sara</h2>
+						</article>
+						<p>Poäng</p>
+
+						<div class="score-count">
+							<p>Spelare 1: <span class="score-player-one"></span></p>
+							<p>Spelare 2: <span class="score-player-two"></span></p>
+						</div>
+
+						<div class="event-field"></div>
+
+						<button type="button" class="reset-button">Återställ poäng</button>
+						<button
+							type="button"
+							class="start-new-match"
+							data-target="overlay1"
+						>
+							Starta nytt spel
+						</button>
+						<button type="button" class="end-game-btn" data-target="overlay5">
+							Avsluta matchen
+						</button>
+					</aside>
+				</section>
+				<footer class="footer"></footer>
+			</div>
+		</main>
+	</body>
+</html>
